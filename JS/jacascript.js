@@ -97,59 +97,90 @@ const questions = [
       incorrect_answers: ["Python", "C", "Jakarta"],
     },
   ];
-
+  
+  const svuotatutto=function(e)
+  {
+  
+      const everytab=document.getElementsByClassName("cellSelected");
+      const everytab1=Array.from(everytab);
+      for (let i=0;i<everytab1.length;i++)
+      {
+          everytab1[i].classList.remove("cellSelected");
+      }
+  }
 
 const question=document.getElementById("question");
 const answer=document.getElementById("answers");
 const answ=[];
+let i = 0
 const confirm=document.createElement("button");
 confirm.innerText="conferma";
 const confirmdiv=document.getElementById("confirma");
 confirmdiv.appendChild(confirm);
+let score = 0
+let risp = document.getElementsByClassName("cellSelected")[0]
+confirm.addEventListener("click", function (){
+  
+  if (risp.innerText === questions[i].correct_answer) {
+    score += 1
+    console.log(score)
+  }
+  i++
+  svuotatutto()
+  question.innerText = questions[i].question
+  if (questions[i].type === 'multiple') {
+    
+  
+    answ[0].innerText=questions[i].correct_answer;
+    answer.appendChild(answ[0]);
+    answ[1].innerText=questions[i].incorrect_answers[0];
+    answer.appendChild(answ[1]);
+    answ[2].innerText=questions[i].incorrect_answers[1];
+    answer.appendChild(answ[2]);
+    answ[3].innerText=questions[i].incorrect_answers[2];
+    answer.appendChild(answ[3]);
+  } else {
+    answ[0].innerText=questions[i].correct_answer;
+    answer.appendChild(answ[0]);
+    answ[1].innerText=questions[i].incorrect_answers[0];
+    answer.appendChild(answ[1]);
+    answ[2].innerText='';
+    answer.appendChild(answ[2]);
+    answ[3].innerText='';
+    answer.appendChild(answ[3]);
+  }
+  
+})
 for(let i=0;i<4;i++)
 {
      answ[i]=document.createElement("div");
      answ[i].addEventListener("click", function(e)
      {
-        answ[i].classList.add("cellCelected")
-
+       svuotatutto(e)
+       answ[i].classList.add("cellSelected")
      })
      
 }
 
-const varee=[];
-for(let i=0;i<10;i++)
-{
-    let r=Math.floor(Math.random()*questions.length);
-if(varee.indexOf(r)===-1)
-{
-    varee.push(r);
-}
-}
-console.log(varee);
+// let r=Math.floor(Math.random()*questions.length);
 
-/*for(let i=0;i<questions.length;i++)
-{
-    if(questions.indexOf(r)===-1)
-    {
-        question.innerText=questions[r].question;
-    }
-    answ[0].innerText=questions[r].correct_answer;
+    question.innerText = questions[i].question
+
+    answ[0].innerText=questions[i].correct_answer;
     answer.appendChild(answ[0]);
-    answ[1].innerText=questions[r].incorrect_answers[0];
+    answ[1].innerText=questions[i].incorrect_answers[0];
     answer.appendChild(answ[1]);
-    answ[2].innerText=questions[r].incorrect_answers[1];
+    answ[2].innerText=questions[i].incorrect_answers[1];
     answer.appendChild(answ[2]);
-    answ[3].innerText=questions[r].incorrect_answers[2];
+    answ[3].innerText=questions[i].incorrect_answers[2];
     answer.appendChild(answ[3]);
-    console.log(r);
-    questions.splice(r,1);
-    console.log(questions.length);
-    
-}
-*/
+    console.log(i);
+    // questions.splice(r,1);
+    // console.log(questions.length);
+console.log(questions[i].question)
 
-console.log(questions);
+
+// console.log(questions);
 //const confirm=document.createElement("div");
 
 
