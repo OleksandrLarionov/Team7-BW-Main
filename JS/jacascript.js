@@ -116,10 +116,24 @@ for(let i=0;i<4;i++)
      })
      
 }
-let r=Math.floor(Math.random()*questions.length);
+
+const varee=[];
 for(let i=0;i<10;i++)
 {
-    question.innerText=questions[r].question;
+    let r=Math.floor(Math.random()*questions.length);
+if(varee.indexOf(r)===-1)
+{
+    varee.push(r);
+}
+}
+console.log(varee);
+
+/*for(let i=0;i<questions.length;i++)
+{
+    if(questions.indexOf(r)===-1)
+    {
+        question.innerText=questions[r].question;
+    }
     answ[0].innerText=questions[r].correct_answer;
     answer.appendChild(answ[0]);
     answ[1].innerText=questions[r].incorrect_answers[0];
@@ -133,7 +147,7 @@ for(let i=0;i<10;i++)
     console.log(questions.length);
     
 }
-
+*/
 
 console.log(questions);
 //const confirm=document.createElement("div");
