@@ -1,3 +1,6 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;400;600;700&display=swap");
+
 /* Css Timer settings */
 
 * {
@@ -11,6 +14,7 @@ body {
 	height: 100vh;
 	background-image: url(../assets/bg.jpg);
 	background-repeat: no-repeat;
+	background-size: cover;
 
 	margin: 0 auto;
 }
@@ -20,20 +24,22 @@ body {
 	display: inline-block;
 	text-align: center;
 	position: relative;
-	left: 200px;
-	top: 200px;
+	/* font-family: "Inter", sans-serif; */
+	font-family: "Outfit", sans-serif;
+	left: 1550px;
+	top: 65px;
 }
 
 .circle-container {
-	width: 400px;
-	height: 400px;
-	background-color: violet;
+	width: 150px;
+	height: 150px;
+	background-color: #00ffff;
 	border-radius: 50%;
 	position: absolute;
-	/* overflow: hidden; */
+	overflow: hidden;
 	z-index: 1;
 }
-/* 00ffff */
+
 .semicircle {
 	width: 50%;
 	height: 100%;
@@ -45,18 +51,18 @@ body {
 }
 
 .semicircle:nth-child(1) {
-	background-color: aqua;
+	background: rgb(196, 164, 200);
 	position: absolute;
 	z-index: 2;
 }
 .semicircle:nth-child(2) {
-	background-color: violet;
+	background-color: #00ffff;
 	position: absolute;
 	z-index: 3;
 	rotate: 180deg;
 }
 .semicircle:nth-child(3) {
-	background-color: violet;
+	background: #00ffff;
 	position: absolute;
 	z-index: 4;
 
@@ -64,59 +70,64 @@ body {
 }
 
 .outermost-circle {
-	width: 340px;
-	height: 340px;
-	background-color: #5c236a;
+	width: 118px;
+	height: 118px;
+	background-image: url(../assets/Screenshot\ 2023-09-18\ 215544.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-size: cover;
 	position: absolute;
 	border-radius: 50%;
-	top: 30px;
-	left: 30px;
+	top: 16px;
+	left: 16px;
 	z-index: 5;
 
 	/* display: none; */
 }
 
-/* Test #timer-main-container:hover .semicircle:nth-child(1) {
-	transform: rotate(180deg);
-	transition: 1s linear;
-}
-#timer-main-container:hover .semicircle:nth-child(2) {
-	transform: rotate(360deg);
-	transition: 2s linear;
-}
-#timer-main-container:hover .semicircle:nth-child(3) {
-	opacity: 0;
-	transition: opacity 0s 1s;
-} */
-
 /* TIMER */
 .timer-container {
-	width: 330px;
-	height: 200px;
+	width: 140px;
+	height: 170px;
+	border-radius: 50%;
 	z-index: 6;
 	position: absolute;
-	top: 145px;
-	left: 1px;
+	top: 15px;
+	left: 15px;
+	font-weight: 300;
+	font-family: "Outfit";
+	color: white;
 }
+
+.timer-container p {
+	position: absolute;
+	font-size: 0.6em;
+}
+.timer-container > p {
+	position: absolute;
+	left: 38px;
+	top: 20px;
+}
+.timer-container p:last-child {
+	position: absolute;
+	left: 38px;
+	top: 85px;
+}
+
 .timer {
 	display: inline;
-	width: 400px;
-	height: 100px;
-	z-index: 7;
+	font-size: 2.5em;
+	position: absolute;
+	left: 42px;
+	top: 25px;
 }
 .timer div {
-	font-size: 70px;
-	height: 100px;
-	width: 80px;
-	height: 80px;
+	position: absolute;
 	display: inline-block;
 	text-align: center;
-	margin: 0 10px;
+	font-size: 1.5em;
 }
+
 .timer .colon {
-	background-color: transparent;
-	width: 10px;
-	margin-left: 10px;
-	margin-right: 10px;
-	padding-bottom: 15px;
+	position: absolute;
 }

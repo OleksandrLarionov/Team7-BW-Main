@@ -1,5 +1,4 @@
 const semicircles = document.querySelectorAll(".semicircle");
-console.log(semicircles[0]);
 const timer = document.querySelector(".timer");
 //input
 
@@ -28,7 +27,7 @@ const countDownTime = () => {
 		semicircles[0].style.transform = `rotate(${-angle}deg)`;
 		semicircles[1].style.transform = `rotate(${-angle}deg)`;
 		semicircles[2].style.transform = `rotate(180deg)`;
-		semicircles[2].style.background.color = `acqua`;
+		semicircles[2].style.backgroundColor = "rgb(196, 164, 200)";
 	}
 
 	//timer
@@ -49,6 +48,13 @@ const countDownTime = () => {
 
 		timer.innerHTML = `
     <div class='colon'>0</div>`;
+	}
+	if (secs > 9) {
+		const timerPosizion = (document.querySelector(".timer").style.left =
+			"35px");
+	} else {
+		const timerPosizion = (document.querySelector(".timer").style.left =
+			"43px");
 	}
 };
 
