@@ -11,7 +11,7 @@ body{
 
 #logo-epicode{
     width: 15em;
-    margin: 3em 0 7em 5em;
+    margin: 3em 0 10em 5em;
 }
 
 h1{
@@ -42,7 +42,7 @@ input{
     background: transparent;
     border: 0;
     border-bottom: 2px solid #900080;
-    width: 60%;
+    width: 55em;
     font-size: 1.5em;
     padding-bottom: 0.8em;
 }
@@ -63,11 +63,15 @@ input{
 button{
     width: 10em;
     height: 3em;
-    font-size: 1.5em;
+    font-size: 1.7em;
     color: #0b113b;
     background-color: #00ffff;
     box-shadow: 0 0 18px 0.5px #00ffff;
     border: none;
     font-weight: 700;
     margin-top: 2em;
+}
+
+#stella-black{
+    filter: brightness(0.2);
 }
