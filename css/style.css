@@ -1,0 +1,122 @@
+/* Css Timer settings */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	background-image: url(../assets/bg.jpg);
+	background-repeat: no-repeat;
+
+	margin: 0 auto;
+}
+
+/* PROGRESS INDICATOR */
+#timer-main-container {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	left: 200px;
+	top: 200px;
+}
+
+.circle-container {
+	width: 400px;
+	height: 400px;
+	background-color: violet;
+	border-radius: 50%;
+	position: absolute;
+	/* overflow: hidden; */
+	z-index: 1;
+}
+/* 00ffff */
+.semicircle {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* Sposto l'origine di rotazione */
+	transform-origin: right center;
+}
+
+.semicircle:nth-child(1) {
+	background-color: aqua;
+	position: absolute;
+	z-index: 2;
+}
+.semicircle:nth-child(2) {
+	background-color: violet;
+	position: absolute;
+	z-index: 3;
+	rotate: 180deg;
+}
+.semicircle:nth-child(3) {
+	background-color: violet;
+	position: absolute;
+	z-index: 4;
+
+	/* display: none; */
+}
+
+.outermost-circle {
+	width: 340px;
+	height: 340px;
+	background-color: #5c236a;
+	position: absolute;
+	border-radius: 50%;
+	top: 30px;
+	left: 30px;
+	z-index: 5;
+
+	/* display: none; */
+}
+
+/* Test #timer-main-container:hover .semicircle:nth-child(1) {
+	transform: rotate(180deg);
+	transition: 1s linear;
+}
+#timer-main-container:hover .semicircle:nth-child(2) {
+	transform: rotate(360deg);
+	transition: 2s linear;
+}
+#timer-main-container:hover .semicircle:nth-child(3) {
+	opacity: 0;
+	transition: opacity 0s 1s;
+} */
+
+/* TIMER */
+.timer-container {
+	width: 330px;
+	height: 200px;
+	z-index: 6;
+	position: absolute;
+	top: 145px;
+	left: 1px;
+}
+.timer {
+	display: inline;
+	width: 400px;
+	height: 100px;
+	z-index: 7;
+}
+.timer div {
+	font-size: 70px;
+	height: 100px;
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+	text-align: center;
+	margin: 0 10px;
+}
+.timer .colon {
+	background-color: transparent;
+	width: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-bottom: 15px;
+}
