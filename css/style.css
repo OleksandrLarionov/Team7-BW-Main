@@ -26,8 +26,8 @@ body {
 	position: relative;
 	/* font-family: "Inter", sans-serif; */
 	font-family: "Outfit", sans-serif;
-	left: 1550px;
-	top: 65px;
+	left: 80%;
+	top: 10%;
 }
 
 .circle-container {
@@ -118,7 +118,7 @@ body {
 	display: inline;
 	font-size: 2.5em;
 	position: absolute;
-	left: 42px;
+	left: 44px;
 	top: 25px;
 }
 .timer div {
@@ -130,4 +130,5 @@ body {
 
 .timer .colon {
 	position: absolute;
+	left: -4px;
 }

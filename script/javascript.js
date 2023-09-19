@@ -4,14 +4,14 @@ const timer = document.querySelector(".timer");
 
 const hr = 0;
 const min = 0;
-const sec = 20;
+const sec = 60; // set timer
 
 const hours = hr * 3600000;
 const minutes = min * 60000;
 const seconds = sec * 1000;
 const setTime = hours + minutes + seconds;
-const starTime = Date.now();
-const futureTime = starTime + setTime;
+const startTime = Date.now();
+const futureTime = startTime + setTime;
 
 const countDownTime = () => {
 	const currentTime = Date.now();
@@ -34,7 +34,7 @@ const countDownTime = () => {
 
 	// const hrs = Math.floor((remaningTime / (1000 * 60 * 60)) % 24);
 	// const min = Math.floor((remaningTime / (1000 * 60)) % 60);
-	const secs = Math.floor((remaningTime / 1000) % 60);
+	const secs = Math.floor((remaningTime / 1000) % 90);
 
 	timer.innerHTML = `
   <div class='colon'>${secs}</div>`;
@@ -49,12 +49,16 @@ const countDownTime = () => {
 		timer.innerHTML = `
     <div class='colon'>0</div>`;
 	}
-	if (secs > 9) {
-		const timerPosizion = (document.querySelector(".timer").style.left =
-			"35px");
+
+	if (secs > 19 && secs < 100) {
+		const timerPosition = (document.querySelector(".timer").style.left =
+			"32px");
+	} else if (secs > 9) {
+		const timerPosition = (document.querySelector(".timer").style.left =
+			"39px");
 	} else {
-		const timerPosizion = (document.querySelector(".timer").style.left =
-			"43px");
+		const timerPosition = (document.querySelector(".timer").style.left =
+			"47px");
 	}
 };
 
