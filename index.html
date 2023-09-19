@@ -5,27 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
+    <title>EPICODE - Benchmark</title>
     <style>
       .cellSelected {
-        background-color: red;
+        background-color: #d20094;
+        background-size: auto;
       }
       #pink {
-        color: palevioletred;
+        color: #d20094;
+        width: 100%;
       }
     </style>
   </head>
   <body>
     <header>
-      <img src="assets/epicode_logo.png" width="1005px" alt="epicode_logo" />
+      <img
+        src="assets/epicode_logo.png"
+        width="1005px"
+        alt="epicode_logo"
+        id="logo-epicode"
+      />
     </header>
     <main>
       <h1 id="question"></h1>
-      <div id="answers"></div>
+      <div id="answers">
+        <div class="answer-box" id="answer1"></div>
+        <div class="answer-box" id="answer2"></div>
+        <div class="answer-box" id="answer3"></div>
+        <div class="answer-box" id="answer4"></div>
+      </div>
+
       <div id="confirma"></div>
     </main>
     <footer>
       <p>QUESTION <span id="totalquest"></span><span id="pink">/10</span></p>
+      <style>
+        p {
+          font-family: "outfit";
+          font-size: larger;
+        }
+      </style>
     </footer>
     <script src="JS/jacascript.js"></script>
   </body>
