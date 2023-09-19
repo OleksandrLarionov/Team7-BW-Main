@@ -92,7 +92,7 @@ const questions = [
     type: "multiple",
     difficulty: "easy",
     question:
-      "Which programming language shares its name with an island in Indonesia?",
+    "Which programming language shares its name with an island in Indonesia?",
     correct_answer: "Java",
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
@@ -100,29 +100,33 @@ const questions = [
 
 const svuotatutto=function(e)
 {
-
-    const everytab=document.getElementsByClassName("cellSelected");
-    const everytab1=Array.from(everytab);
-    for (let i=0;i<everytab1.length;i++)
-    {
-        everytab1[i].classList.remove("cellSelected");
+  
+  const everytab=document.getElementsByClassName("cellSelected");
+  const everytab1=Array.from(everytab);
+  for (let i=0;i<everytab1.length;i++)
+  {
+    everytab1[i].classList.remove("cellSelected");
     }
-}
-
-const question=document.getElementById("question");
-const answer=document.getElementById("answers");
-const answ=[];
-let i = 0
-const confirm=document.createElement("button");
-confirm.classList.add("submit");
-confirm.innerText="conferma";
-const confirmdiv=document.getElementById("confirma");
-confirmdiv.appendChild(confirm);
-let score = 0
-
-
-confirm.addEventListener("click", function ()
-{
+    confirm.style.display = 'none'
+  }
+  
+  const question=document.getElementById("question");
+  const answer=document.getElementById("answers");
+  const answ=[];
+  let i = 0
+  const confirm=document.createElement("button");
+  confirm.classList.add("submit");
+  confirm.innerText="conferma";
+  const confirmdiv=document.getElementById("confirma");
+  confirmdiv.appendChild(confirm);
+  confirm.style.display = 'none'
+  let score = 0
+  const counter = document.getElementById('totalquest') 
+  counter.innerText = i+1
+  
+  
+  confirm.addEventListener("click", function ()
+  {
  
   let risp = document.getElementsByClassName("cellSelected")
   let risp2=Array.from(risp);
@@ -133,7 +137,8 @@ confirm.addEventListener("click", function ()
   console.log(score)
   }
   i++
-
+  counter.innerText = i+1
+  
   svuotatutto()
 
 if(i<questions.length)
@@ -194,6 +199,7 @@ for(let i=0;i<4;i++)
    {
      svuotatutto(e)
      answ[i].classList.add("cellSelected")
+     confirm.style.display = 'inline-block'
    })
    
 }
@@ -220,9 +226,9 @@ return num
   console.log(questions[i].question)
   
   
-  
-    
-  
+  // const footer = document.getElementsByTagName('footer')[0]
+
+  console.log(i)
 
 
 // console.log(questions);
