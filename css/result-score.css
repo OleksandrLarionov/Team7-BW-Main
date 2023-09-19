@@ -190,3 +190,13 @@ h4 {
 	font-weight: 300;
 	font-size: 0.9em;
 }
+
+.fail {
+	color: #d20094;
+	position: absolute;
+	left: 36%;
+	top: 43%;
+	z-index: 6;
+	font-weight: bolder;
+	font-size: 3em;
+}

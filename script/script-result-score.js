@@ -1,13 +1,13 @@
 const semicirclesScore = document.querySelectorAll(".semicircle-score");
-const score = 3;
+const score = 15;
 const correct = document.querySelectorAll(".percent-c");
 const wrong = document.querySelectorAll(".percent-w");
 const question = document.querySelectorAll(".percent-q");
 
-const totalScore = 10;
+const totalScore = 29;
 const wrongScore = totalScore - score;
-const wrongPercent = ((totalScore - score) * 100) / totalScore;
-const scorePercent = (score * 100) / totalScore;
+const wrongPercent = (((totalScore - score) * 100) / totalScore).toFixed(2);
+const scorePercent = ((score * 100) / totalScore).toFixed(2);
 
 const scoreDisplay = () => {
 	const angle = (score / totalScore) * 360;
@@ -29,8 +29,10 @@ const scoreDisplay = () => {
 	question[0].innerHTML = `${score}/${totalScore} questions`;
 	question[1].innerHTML = `${wrongScore}/${totalScore} questions`;
 	if (scorePercent < 60) {
-		const centralText = document.querySelector(".congrats");
+		const centralText = document.querySelector(".pass");
 		centralText.style.display = "none";
+		const congrats = document.querySelector(".congrats");
+		congrats.innerHTML = `<h2 class='fail'>FAIL!</h2>`;
 	}
 };
 
