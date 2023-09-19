@@ -131,32 +131,35 @@ confirm.addEventListener("click", function (){
   }
   i++
   svuotatutto()
-  question.innerText = questions[i].question
-  if (questions[i].type === 'multiple' && i<=questions.length) 
+  if(i<questions.length)
   {
-    answ[0].innerText=questions[i].correct_answer;
-    answer.appendChild(answ[0]);
-    answ[1].innerText=questions[i].incorrect_answers[0];
-    answer.appendChild(answ[1]);
-    answ[2].innerText=questions[i].incorrect_answers[1];
-    answer.appendChild(answ[2]);
-    answ[3].innerText=questions[i].incorrect_answers[2];
-    answer.appendChild(answ[3]);
+    question.innerText = questions[i].question
+    if (questions[i].type === 'multiple' && i<=questions.length) 
+    {
+      answ[0].innerText=questions[i].correct_answer;
+      answer.appendChild(answ[0]);
+      answ[1].innerText=questions[i].incorrect_answers[0];
+      answer.appendChild(answ[1]);
+      answ[2].innerText=questions[i].incorrect_answers[1];
+      answer.appendChild(answ[2]);
+      answ[3].innerText=questions[i].incorrect_answers[2];
+      answer.appendChild(answ[3]);
     
-  } else if (questions[i].type==="boolean" && i<=questions.length)
-  {
-    answ[0].innerText=questions[i].correct_answer;
-    answer.appendChild(answ[0]);
-    answ[1].innerText=questions[i].incorrect_answers[0];
-    answer.appendChild(answ[1]);
-    answ[2].innerText='';
-    answer.appendChild(answ[2]);
-    answ[3].innerText='';
-    answer.appendChild(answ[3]);
+    } else if (questions[i].type==="boolean" && i<=questions.length)
+    {
+      answ[0].innerText=questions[i].correct_answer;
+      answer.appendChild(answ[0]);
+      answ[1].innerText=questions[i].incorrect_answers[0];
+      answer.appendChild(answ[1]);
+      answ[2].innerText='';
+      answer.appendChild(answ[2]);
+      answ[3].innerText='';
+      answer.appendChild(answ[3]);
+    }
   }
   else
   {
-    alert("test finito");
+    alert("test finito"+ score);
   }
 })
 for(let i=0;i<4;i++)
