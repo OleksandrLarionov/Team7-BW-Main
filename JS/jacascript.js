@@ -159,7 +159,7 @@ if(i<questions.length)
 }
 else
 {
-  alert("test finito"+ score);
+  alert("test finito, totale punteggio: "+ score);
 }
 })
 for(let i=0;i<4;i++)
