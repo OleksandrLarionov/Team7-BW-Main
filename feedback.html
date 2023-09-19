@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/feedback.css" />
     <title>Feedback page</title>
@@ -27,40 +34,26 @@
         <img src="assets/star.svg" alt="stelle valutazione 1" class="stella" />
         <img src="assets/star.svg" alt="stelle valutazione 1" class="stella" />
         <img src="assets/star.svg" alt="stelle valutazione 1" class="stella" />
-        <img
-          src="assets/star.svg"
-          alt="stelle valutazione 1"
-          class="stella"
-          id="stella-black"
-        />
-        <img
-          src="assets/star.svg"
-          alt="stelle valutazione 1"
-          class="stella"
-          id="stella-black"
-        />
-        <img
-          src="assets/star.svg"
-          alt="stelle valutazione 1"
-          class="stella"
-          id="stella-black"
-        />
-        <img
-          src="assets/star.svg"
-          alt="stelle valutazione 1"
-          class="stella"
-          id="stella-black"
-        />
+        <img src="assets/star.svg" alt="stelle valutazione 1" class="stella" />
+        <img src="assets/star.svg" alt="stelle valutazione 1" class="stella" />
+        <img src="assets/star.svg" alt="stelle valutazione 1" class="stella" />
+        <img src="assets/star.svg" alt="stelle valutazione 1" class="stella" />
       </div>
-      <div>
-        <p id="feedback">
-          Leave us an open feedback about your experience so far
-        </p>
-        <input type="text" placeholder="Write your comment here" />
-      </div>
+      <form id="main-form">
+        <div>
+          <label for="comment"
+            >Leave us an open feedback about your experience so far</label
+          >
+          <input
+            type="text"
+            placeholder="Write your comment here"
+            id="comment"
+          />
+        </div>
+        <button>MORE INFO</button>
+      </form>
     </main>
-    <footer>
-      <button>MORE INFO</button>
-    </footer>
+    <footer></footer>
+    <script src="JS/feedback.js"></script>
   </body>
 </html>

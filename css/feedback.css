@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Lexend:wght@300;500&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;500;600;700&family=Outfit:wght@400;700&family=Poppins:wght@300;400;500&family=Prata&family=Roboto+Condensed&family=Rubik:wght@400;500&family=Ubuntu:wght@400;500;700&family=Zilla+Slab:wght@400;600&display=swap');
 
 body{
+    box-sizing: border-box;
     background-image: url(../assets/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,9 +33,10 @@ h1 + div {
     line-height: 1.3em;
 }
 
-#feedback{
+label{
     color: white;
     font-size: 3em; 
+    display: block;
 }
 
 input{
@@ -45,6 +47,7 @@ input{
     width: 55em;
     font-size: 1.5em;
     padding-bottom: 0.8em;
+    color: white;
 }
 
 .stella{
@@ -70,8 +73,21 @@ button{
     border: none;
     font-weight: 700;
     margin-top: 2em;
+    margin-bottom: 5em;
 }
 
-#stella-black{
+.stella{
     filter: brightness(0.2);
+    cursor: pointer;
+    
 }
+
+.active {
+    filter: brightness(1);
+}
+
+button{
+    cursor: pointer;
+}
+
+
