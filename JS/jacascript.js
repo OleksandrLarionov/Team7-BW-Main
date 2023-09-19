@@ -118,6 +118,7 @@ for(let i=0;i<4;i++)
 }
 
 const varee=[];
+console.log("toglimi");
 for(let i=0;i<10;i++)
 {
     let r=Math.floor(Math.random()*questions.length);
