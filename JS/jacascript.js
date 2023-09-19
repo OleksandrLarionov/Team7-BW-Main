@@ -145,8 +145,8 @@ if(i<questions.length)
     answer.appendChild(answ[2]);
     answ[3].innerText=questions[i].incorrect_answers[2];
     answer.appendChild(answ[3]);
-  
-  } else if (questions[i].type==="boolean" && i<=questions.length)
+  } 
+  else if (questions[i].type==="boolean" && i<=questions.length)
   {
     answ[0].innerText=questions[i].correct_answer;
     answer.appendChild(answ[0]);
