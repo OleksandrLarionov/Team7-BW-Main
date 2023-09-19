@@ -119,24 +119,29 @@ confirm.innerText="conferma";
 const confirmdiv=document.getElementById("confirma");
 confirmdiv.appendChild(confirm);
 let score = 0
-confirm.addEventListener("click", function (){
 
-let risp = document.getElementsByClassName("cellSelected")
-let risp2=Array.from(risp);
-console.log(risp2[0].innerText)
-
-if (risp2[0].innerText === questions[i].correct_answer) {
+confirm.addEventListener("click", function ()
+{
+ 
+  let risp = document.getElementsByClassName("cellSelected")
+  let risp2=Array.from(risp);
+  console.log(risp2[0].innerText)
+  if (risp2[0].innerText === questions[i].correct_answer) 
+  {
   score += 1
   console.log(score)
-  
-}
-i++
-svuotatutto()
+  }
+  i++
+
+  svuotatutto()
+
 if(i<questions.length)
 {
   question.innerText = questions[i].question
-  if (questions[i].type === 'multiple' && i<=questions.length) 
+  
+  if (questions[i].type === 'multiple') 
   {
+    
     answ[0].innerText=questions[i].correct_answer;
     answer.appendChild(answ[0]);
     answ[1].innerText=questions[i].incorrect_answers[0];
@@ -145,9 +150,12 @@ if(i<questions.length)
     answer.appendChild(answ[2]);
     answ[3].innerText=questions[i].incorrect_answers[2];
     answer.appendChild(answ[3]);
+    
+    
   } 
-  else if (questions[i].type==="boolean" && i<=questions.length)
+  else if (questions[i].type==="boolean")
   {
+    
     answ[0].innerText=questions[i].correct_answer;
     answer.appendChild(answ[0]);
     answ[1].innerText=questions[i].incorrect_answers[0];
@@ -173,9 +181,9 @@ for(let i=0;i<4;i++)
    })
    
 }
+const random=[0,1,2,3];
+const r=Math.floor(Math.random()*4);
 
-// let r=Math.floor(Math.random()*questions.length);
- 
   
   question.innerText = questions[i].question
   answ[0].innerText=questions[i].correct_answer;
