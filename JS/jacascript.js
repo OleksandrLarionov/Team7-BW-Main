@@ -127,7 +127,7 @@ if(varee.indexOf(r)===-1)
 }
 }
 console.log(varee);
-
+console.log("ciao")
 /*for(let i=0;i<questions.length;i++)
 {
     if(questions.indexOf(r)===-1)
