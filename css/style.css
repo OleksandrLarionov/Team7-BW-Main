@@ -60,6 +60,7 @@ body {
 	position: absolute;
 	z-index: 3;
 	rotate: 180deg;
+	/* display: none; */
 }
 .semicircle:nth-child(3) {
 	background: #00ffff;

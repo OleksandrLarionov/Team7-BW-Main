@@ -4,7 +4,7 @@ const timer = document.querySelector(".timer");
 
 const hr = 0;
 const min = 0;
-const sec = 60; // set timer
+const sec = 20; // set timer
 
 const hours = hr * 3600000;
 const minutes = min * 60000;
@@ -64,3 +64,5 @@ const countDownTime = () => {
 
 const timeLoop = setInterval(countDownTime);
 countDownTime();
+
+//result score
