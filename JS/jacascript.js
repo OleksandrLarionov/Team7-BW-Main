@@ -120,6 +120,7 @@ const confirmdiv=document.getElementById("confirma");
 confirmdiv.appendChild(confirm);
 let score = 0
 
+
 confirm.addEventListener("click", function ()
 {
  
@@ -142,28 +143,43 @@ if(i<questions.length)
   if (questions[i].type === 'multiple') 
   {
     
+    const randomNumArr = [0,1,2,3]
+    const randomNum = function (){
+        const i = Math.floor(Math.random()*randomNumArr.length)
+        const randomNumber = randomNumArr.splice(i,1)[0]
+        return randomNumber
+}
+
     answ[0].innerText=questions[i].correct_answer;
-    answer.appendChild(answ[0]);
     answ[1].innerText=questions[i].incorrect_answers[0];
-    answer.appendChild(answ[1]);
     answ[2].innerText=questions[i].incorrect_answers[1];
-    answer.appendChild(answ[2]);
     answ[3].innerText=questions[i].incorrect_answers[2];
-    answer.appendChild(answ[3]);
+    answer.appendChild(answ[randomNum()]);
+    answer.appendChild(answ[randomNum()]);
+    answer.appendChild(answ[randomNum()]);
+    answer.appendChild(answ[randomNum()]);
     
     
   } 
   else if (questions[i].type==="boolean")
   {
+
+
+    const randomNumArr = [0,1,2,3]
+    const randomNum = function (){
+        const i = Math.floor(Math.random()*randomNumArr.length)
+        const randomNumber = randomNumArr.splice(i,1)[0]
+        return randomNumber
+}
     
     answ[0].innerText=questions[i].correct_answer;
-    answer.appendChild(answ[0]);
     answ[1].innerText=questions[i].incorrect_answers[0];
-    answer.appendChild(answ[1]);
     answ[2].innerText='';
-    answer.appendChild(answ[2]);
     answ[3].innerText='';
-    answer.appendChild(answ[3]);
+    answer.appendChild(answ[randomNum()]);
+    answer.appendChild(answ[randomNum()]);
+    answer.appendChild(answ[randomNum()]);
+    answer.appendChild(answ[randomNum()]);
   }
 }
 else
@@ -181,19 +197,25 @@ for(let i=0;i<4;i++)
    })
    
 }
+
 const random=[0,1,2,3];
-const r=Math.floor(Math.random()*4);
+const r= function (){
+let i = Math.floor(Math.random()*random.length);
+let num = random.splice(i,1)[0]
+return num
+}
+
 
   
   question.innerText = questions[i].question
   answ[0].innerText=questions[i].correct_answer;
-  answer.appendChild(answ[0]);
   answ[1].innerText=questions[i].incorrect_answers[0];
-  answer.appendChild(answ[1]);
   answ[2].innerText=questions[i].incorrect_answers[1];
-  answer.appendChild(answ[2]);
   answ[3].innerText=questions[i].incorrect_answers[2];
-  answer.appendChild(answ[3]);
+  answer.appendChild(answ[r()]);
+  answer.appendChild(answ[r()]);
+  answer.appendChild(answ[r()]);
+  answer.appendChild(answ[r()]);
   console.log(i);
   console.log(questions[i].question)
   
