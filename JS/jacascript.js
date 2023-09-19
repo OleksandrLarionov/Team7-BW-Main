@@ -114,6 +114,7 @@ const answer=document.getElementById("answers");
 const answ=[];
 let i = 0
 const confirm=document.createElement("button");
+confirm.classList.add("submit");
 confirm.innerText="conferma";
 const confirmdiv=document.getElementById("confirma");
 confirmdiv.appendChild(confirm);
