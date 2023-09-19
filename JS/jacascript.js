@@ -159,7 +159,7 @@ if(i<questions.length)
 }
 else
 {
-  alert("test finito");
+  alert("test finito"+ score);
 }
 })
 for(let i=0;i<4;i++)
@@ -196,6 +196,8 @@ for(let i=0;i<4;i++)
 
 // console.log(questions);
 //const confirm=document.createElement("div");
+
+
 
 
 
