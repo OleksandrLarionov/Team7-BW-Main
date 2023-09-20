@@ -14,11 +14,8 @@ body {
 	color: white;
 	min-width: 30%;
 }
-body p,
-h1,
-h2,
-h3 {
-	color: white;
+main h3 {
+	color: #c1c3d1;
 }
 main {
 	width: 100%;
@@ -45,7 +42,7 @@ main h1 {
 }
 main h3 {
 	text-align: center;
-	font-size: 2em;
+	font-size: 1.7em;
 }
 
 /* RESULT DISPLAY */
@@ -56,8 +53,8 @@ main h3 {
 	/* font-family: "Inter", sans-serif; */
 	/* font-family: "Outfit", sans-serif; */
 	margin-top: 3%;
-	width: 400px;
-	height: 400px;
+	width: 350px;
+	height: 350px;
 }
 
 .main-score {
@@ -102,16 +99,16 @@ main h3 {
 }
 
 .outermost-circle-score {
-	width: 78%;
-	height: 78%;
+	width: 76%;
+	height: 76%;
 	background-image: url(../assets/Screenshot\ 2023-09-19\ 143940.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: absolute;
 	border-radius: 50%;
-	top: 11%;
-	left: 11%;
+	top: 12%;
+	left: 12%;
 	z-index: 5;
 
 	/* display: none; */
@@ -140,22 +137,36 @@ main h3 {
 }
 .correct {
 	top: 44%;
-	left: 15%;
+	left: 23%;
 }
 .wrong {
 	top: 44%;
-	right: 15%;
+	right: 23%;
+	color: #c1c3d1;
 }
 
 .correct h2,
-.wrong h2,
-.percent-c,
-.percent-w {
+.wrong h2 {
 	font-size: 60px;
 	text-align: center;
 }
+.percent-c {
+	font-size: 60px;
+	text-align: left;
+}
+.percent-w {
+	font-size: 60px;
+	text-align: right;
+}
 .percent-q {
-	text-align: center;
+	color: #c1c3d1;
+}
+
+.wrong .percent-q {
+	text-align: right;
+}
+.correct .percent-q {
+	text-align: left;
 }
 
 /* CENTRAL TEXT*/
@@ -168,20 +179,20 @@ h4 {
 }
 
 .congrats h3:nth-child(1) {
-	left: 29%;
+	left: 25%;
 	top: 26%;
-	font-size: 1.5em;
+	font-size: 1.4em;
 }
 
 .congrats h3:nth-child(2) {
-	left: 23%;
+	left: 20%;
 	top: 33%;
-	font-size: 1.5em;
+	font-size: 1.4em;
 	color: #00ffff;
 }
 
 .congrats h4 {
-	left: 22%;
+	left: 19%;
 	top: 50%;
 	display: inline-block;
 	width: 230px;
@@ -190,6 +201,7 @@ h4 {
 	font-family: "Inter", sans-serif;
 	font-weight: 300;
 	font-size: 0.9em;
+	color: #c1c3d1;
 }
 
 .fail {

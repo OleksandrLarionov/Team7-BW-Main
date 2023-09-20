@@ -6,8 +6,8 @@ const question = document.querySelectorAll(".percent-q");
 
 const totalScore = 30;
 const wrongScore = totalScore - score;
-const wrongPercent = (((totalScore - score) * 100) / totalScore).toFixed(2);
-const scorePercent = ((score * 100) / totalScore).toFixed(2);
+const wrongPercent = (((totalScore - score) * 100) / totalScore).toFixed(1);
+const scorePercent = ((score * 100) / totalScore).toFixed(1);
 
 const scoreDisplay = () => {
 	const angle = (score / totalScore) * 360;
@@ -36,9 +36,19 @@ const scoreDisplay = () => {
 		failText1[1].innerHTML = `You did not pass the exam`;
 		failText3[0].innerHTML = `Check your email (including the promotions/spam folder)`;
 		failText1[1].style.color = "#d20094";
-		failText1[1].style.left = "16%";
+		failText1[1].style.fontSize = "1.2em";
+		failText1[1].style.left = "19%";
 		failText1[0].style.left = "34%";
+
+		//Color switch
+		const wrong = document.querySelector(".wrong");
+		const correct = document.querySelector(".correct");
+		wrong.style.color = "white";
+		correct.style.color = " #c1c3d1";
 		canvas.style.display = "none";
+	} else {
+		const colorWrong = document.querySelector(".wrong");
+		colorWrong.style.color = "color: #c1c3d1;";
 	}
 };
 
@@ -69,7 +79,7 @@ const colors = [
 ];
 
 //-----------Functions--------------
-resizeCanvas = () => {
+let resizeCanvas = () => {
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
 	cx = ctx.canvas.width / 2;
@@ -78,7 +88,7 @@ resizeCanvas = () => {
 
 randomRange = (min, max) => Math.random() * (max - min) + min;
 
-initConfetti = () => {
+let initConfetti = () => {
 	for (let i = 0; i < confettiCount; i++) {
 		confetti.push({
 			color: colors[Math.floor(randomRange(0, colors.length))],
@@ -107,7 +117,7 @@ initConfetti = () => {
 };
 
 //---------Render-----------
-render = () => {
+let render = () => {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 	confetti.forEach((confetto, index) => {
@@ -148,9 +158,6 @@ render = () => {
 		// Reset transform matrix
 		ctx.setTransform(1, 0, 0, 1, 0, 0);
 	});
-
-	// Fire off another round of confetti
-	if (confetti.length <= 10) initConfetti();
 
 	window.requestAnimationFrame(render);
 };
