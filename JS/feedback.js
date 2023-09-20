@@ -11,15 +11,18 @@ const submitForm = function(){
         })
     })
 
-    getForm = document.getElementById('main-form')
+    const getForm = document.getElementById('main-form')
     getForm.addEventListener('submit', function(e){
         e.preventDefault()
         const commentField = document.getElementById('comment')
         alert('Thank you for your comment')
-        commentField.value = ''  
-    }) 
-    
-
+        commentField.value = '' 
+        
+        
+        stars.forEach((star) => {
+            star.classList.remove('active');
+        })  
+    })
 }
 submitForm()
 
