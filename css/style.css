@@ -9,16 +9,6 @@
 	box-sizing: border-box;
 }
 
-body {
-	width: 100%;
-	height: 100vh;
-	background-image: url(../assets/bg.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-
-	margin: 0 auto;
-}
-
 /* PROGRESS INDICATOR */
 #timer-main-container {
 	display: inline-block;
@@ -132,4 +122,129 @@ body {
 .timer .colon {
 	position: absolute;
 	left: -4px;
+}
+
+* {
+	font-family: "Inter", sans-serif;
+	font-family: "Outfit", sans-serif;
+}
+
+body {
+	background-image: url(../assets/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+#logo-epicode {
+	width: 15em;
+	margin: 2em 0 5em 5em;
+}
+
+#question {
+	font-size: 40px;
+	font-weight: bold;
+	font-family: "Outfit", sans-serif;
+	margin-bottom: 20px;
+	color: white;
+	text-align: center;
+}
+
+#answers {
+	font-size: medium;
+	font-weight: 600;
+	font-family: "Outfit", sans-serif;
+	color: white;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+#confirma {
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin: 20px;
+
+	font-family: "outfit";
+}
+footer {
+	color: white;
+	text-align: center;
+}
+
+/* #answers div{
+    hu
+ } */
+
+.answer-box {
+	padding: 15px;
+	margin: 20px;
+	border-top: 3px solid #ccc;
+	border-left: 3px solid #ccc;
+	border-right: 0;
+	border-bottom: 1px solid rgb(61, 65, 96);
+	cursor: pointer;
+	text-align: center;
+	background-color: rgba(#f7f7f7, 0.9);
+	border-radius: 30px;
+	transition: background-color 0.3s ease;
+	color: #fff;
+	display: inline-block;
+	width: 40vh;
+	padding-left: 10em;
+	padding-right: 10em;
+}
+
+/* #answer1 {
+    
+    background-color: transparent;
+    color: #fff;
+}
+
+#answer2 {
+   
+    background-color: transparent;
+    color: #fff;
+}
+
+#answer3 {
+    
+    background-color: transparent;
+    color: #fff;
+}
+
+#answer4 {
+   
+    background-color: transparent;
+    color: #fff;
+} */
+
+.submit {
+	background-color: transparent;
+	border: 1.5px solid white;
+	color: white;
+	padding: 0.5em;
+	padding-left: 1.8em;
+	padding-right: 1.8em;
+	font-size: large;
+	font-weight: bold;
+	text-align: end;
+}
+.cellSelected {
+	background-color: #d20094;
+	background-size: auto;
+}
+footer {
+	margin-top: 2em;
+	text-align: center;
+}
+#pink {
+	color: #d20094;
+	width: 100%;
+}
+p {
+	font-family: "outfit";
+	font-size: larger;
 }
