@@ -13,11 +13,11 @@
 #timer-main-container {
 	display: inline-block;
 	text-align: center;
-	position: relative;
+	position: absolute;
 	/* font-family: "Inter", sans-serif; */
 	font-family: "Outfit", sans-serif;
 	left: 80%;
-	top: 10%;
+	top: 5%;
 }
 
 .circle-container {
@@ -139,16 +139,20 @@ body {
 
 #logo-epicode {
 	width: 15em;
-	margin: 2em 0 5em 5em;
+	margin: 2em 0 0em 5em;
+}
+
+header {
+	display: inline-block;
 }
 
 #question {
 	font-size: 40px;
 	font-weight: bold;
 	font-family: "Outfit", sans-serif;
-	margin-bottom: 20px;
 	color: white;
 	text-align: center;
+	margin: 13% 80px 0 80px;
 }
 
 #answers {
@@ -160,6 +164,8 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	width: 770px;
+	margin: 30px auto 0 auto;
 }
 #confirma {
 	color: white;
@@ -179,7 +185,6 @@ footer {
  } */
 
 .answer-box {
-	padding: 15px;
 	margin: 20px;
 	border-top: 3px solid #ccc;
 	border-left: 3px solid #ccc;
@@ -187,14 +192,13 @@ footer {
 	border-bottom: 1px solid rgb(61, 65, 96);
 	cursor: pointer;
 	text-align: center;
-	background-color: rgba(#f7f7f7, 0.9);
+	/* background-color: rgba(#f7f7f7, 0.9); //?? */
 	border-radius: 30px;
 	transition: background-color 0.3s ease;
 	color: #fff;
 	display: inline-block;
-	width: 40vh;
-	padding-left: 10em;
-	padding-right: 10em;
+	width: 345px;
+	padding: 1.6em 0;
 }
 
 /* #answer1 {
@@ -244,7 +248,7 @@ footer {
 	color: #d20094;
 	width: 100%;
 }
-p {
+footer p {
 	font-family: "outfit";
 	font-size: larger;
 }

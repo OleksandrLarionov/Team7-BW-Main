@@ -2,21 +2,22 @@ const semicircles = document.querySelectorAll(".semicircle");
 const timer = document.querySelector(".timer");
 //input
 
-const hr = 0;
-const min = 0;
-const sec = 10; // set timer
+let hr = 0;
+let min = 0;
+let sec = 30; // set timer
 
-const hours = hr * 3600000;
-const minutes = min * 60000;
-const seconds = sec * 1000;
-const setTime = hours + minutes + seconds;
-const startTime = Date.now();
-const futureTime = startTime + setTime;
+let hours = hr * 3600000;
+let minutes = min * 60000;
+let seconds = sec * 1000;
+let setTime = hours + minutes + seconds;
+let startTime = Date.now();
+let futureTime = startTime + setTime;
 
-const countDownTime = () => {
-	const currentTime = Date.now();
-	const remaningTime = futureTime - currentTime;
-	const angle = (remaningTime / setTime) * 360;
+// funzione per far girare i rettangoli
+const moveCircles = () => {
+	let currentTime = Date.now();
+	let remaningTime = futureTime - currentTime;
+	let angle = (remaningTime / setTime) * 360;
 	//indicatore di proggressione
 	if (angle > 180) {
 		semicircles[1].style.display = "default";
@@ -29,17 +30,19 @@ const countDownTime = () => {
 		semicircles[2].style.transform = `rotate(180deg)`;
 		semicircles[2].style.backgroundColor = "rgb(196, 164, 200)";
 	}
+};
+
+const countDownTime = () => {
+	const currentTime = Date.now();
+	const remaningTime = futureTime - currentTime;
+	moveCircles();
 
 	//timer
-
-	// const hrs = Math.floor((remaningTime / (1000 * 60 * 60)) % 24);
-	// const min = Math.floor((remaningTime / (1000 * 60)) % 60);
 	const secs = Math.floor((remaningTime / 1000) % 90);
 
 	timer.innerHTML = `
   <div class='colon'>${secs}</div>`;
 
-	// end
 	if (remaningTime < 0) {
 		clearInterval(timeLoop);
 		semicircles[0].style.display = "none";
@@ -60,8 +63,29 @@ const countDownTime = () => {
 	}
 };
 
-const timeLoop = setInterval(countDownTime);
-countDownTime();
+let timeLoop = setInterval(countDownTime); // continua a richiamare la mia funzione del tempo e aggiorna il timer
+
+function resetTimer() {
+	semicircles[0].style.display = "block";
+	semicircles[1].style.display = "block";
+	semicircles[2].style.display = "block";
+
+	let hr = 0;
+	let min = 0;
+	let sec = 30;
+	let hours = hr * 3600000;
+	let minutes = min * 60000;
+	let seconds = sec * 1000;
+	let setTime = hours + minutes + seconds;
+	futureTime = Date.now() + setTime; // Aggiorna futureTime
+
+	// rimettiamo le funzioni del tempo
+	semicircles[2].style.transform = `rotate(360deg)`;
+	semicircles[2].style.backgroundColor = "#00ffff";
+
+	// riavvio del timer
+	timeLoop = setInterval(countDownTime);
+}
 
 //result score
 
@@ -176,6 +200,7 @@ const answ = [];
 let i = 0;
 const confirm = document.createElement("button");
 confirm.classList.add("submit");
+confirm.onclick = () => resetTimer();
 confirm.innerHTML = "PROSSIMA →";
 const confirmdiv = document.getElementById("confirma");
 confirmdiv.appendChild(confirm);
@@ -246,6 +271,8 @@ confirm.addEventListener("click", function () {
 	} else {
 		alert("test finito, totale punteggio: " + score);
 		//INSERIRE QUI LA VARIABILE LOCALSTORAGE
+		let score_serialized = JSON.parse(score);
+		localStorage.setItem("score", score_serialized);
 	}
 });
 for (let i = 0; i < 4; i++) {
