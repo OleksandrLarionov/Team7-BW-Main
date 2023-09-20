@@ -16,7 +16,7 @@ body {
  
 #logo-epicode {
     width: 15em;
-    margin: 3em 0 7em 5em ;
+    margin: 2em 0 5em 5em ;
 }
 
 #question {
@@ -35,7 +35,7 @@ text-align: center;}
     text-align: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 
 }
  #confirma {
@@ -52,19 +52,33 @@ text-align: center;}
 
  }
 
+ /* #answers div{
+    hu
+ } */
+
  .answer-box {
     
     padding: 15px;
     margin: 20px;
-    border: 3px solid #ccc;
+    border-top: 3px solid #ccc;
+    border-left: 3px solid #ccc;
+    border-right: 0;
+    border-bottom: 1px solid rgb(61, 65, 96);
     cursor: pointer;
     text-align: center;
-    background-color: #f7f7f7;
+    background-color: rgba(#f7f7f7, 0.9);
     border-radius: 30px;
     transition: background-color 0.3s ease;
+    color: #fff;
+    display: inline-block;
+    width: 40vh;
+    padding-left: 10em;
+    padding-right: 10em;
     
 }
-#answer1 {
+
+
+/* #answer1 {
     
     background-color: transparent;
     color: #fff;
@@ -86,5 +100,32 @@ text-align: center;}
    
     background-color: transparent;
     color: #fff;
-}
+} */
 
+.submit {
+    background-color: transparent;
+    border: 1.5px solid white;
+    color: white;
+    padding: 0.5em;
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    font-size: large;
+    font-weight: bold;
+    text-align: end;
+}
+.cellSelected {
+    background-color: #d20094;
+    background-size: auto;
+  }
+footer{
+    margin-top: 2em;
+    text-align: center;
+}
+#pink {
+    color: #d20094;
+    width: 100%;
+  }
+ p {
+    font-family: "outfit";
+    font-size: larger;
+}
