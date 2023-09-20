@@ -4,7 +4,7 @@ const timer = document.querySelector(".timer");
 
 const hr = 0;
 const min = 0;
-const sec = 20; // set timer
+const sec = 10; // set timer
 
 const hours = hr * 3600000;
 const minutes = min * 60000;
@@ -45,9 +45,7 @@ const countDownTime = () => {
 		semicircles[0].style.display = "none";
 		semicircles[1].style.display = "none";
 		semicircles[2].style.display = "none";
-
-		timer.innerHTML = `
-    <div class='colon'>0</div>`;
+		timer.innerHTML = `<div class='colon'>0</div>`;
 	}
 
 	if (secs > 19 && secs < 100) {
@@ -247,6 +245,7 @@ confirm.addEventListener("click", function () {
 		}
 	} else {
 		alert("test finito, totale punteggio: " + score);
+		//INSERIRE QUI LA VARIABILE LOCALSTORAGE
 	}
 });
 for (let i = 0; i < 4; i++) {
