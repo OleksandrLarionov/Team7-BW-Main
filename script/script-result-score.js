@@ -1,10 +1,10 @@
 const semicirclesScore = document.querySelectorAll(".semicircle-score");
-const score = 25;
+const score = localStorage.getItem("score");
 const correct = document.querySelectorAll(".percent-c");
 const wrong = document.querySelectorAll(".percent-w");
 const question = document.querySelectorAll(".percent-q");
 
-const totalScore = 30;
+const totalScore = 56;
 const wrongScore = totalScore - score;
 const wrongPercent = (((totalScore - score) * 100) / totalScore).toFixed(1);
 const scorePercent = ((score * 100) / totalScore).toFixed(1);
