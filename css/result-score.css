@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;400;600;700&display=swap");
+* {
+	box-sizing: border-box;
+}
+body {
+	/* font-family: "Inter", sans-serif; */
+	font-family: "Outfit", sans-serif;
+	width: 100%;
+	height: 100vh;
+	background-image: url(../assets/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0 auto;
+	color: white;
+	min-width: 30%;
+}
+main h3 {
+	color: #c1c3d1;
+}
+main {
+	width: 100%;
+	height: 100%;
+}
+.logo {
+	width: 9%;
+	display: inline-block;
+
+	margin-left: 13%;
+	margin-top: 2%;
+}
+.logo img {
+	width: 100%;
+}
+
+/* Text h1, h2 */
+main h1 {
+	text-align: center;
+	font-size: 60px;
+	font-family: "Outfit", sans-serif;
+	margin-top: 4%;
+	font-weight: bold;
+}
+main h3 {
+	text-align: center;
+	font-size: 1.7em;
+}
+
+/* RESULT DISPLAY */
+#score-main-container {
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	/* font-family: "Inter", sans-serif; */
+	/* font-family: "Outfit", sans-serif; */
+	margin-top: 3%;
+	width: 350px;
+	height: 350px;
+}
+
+.main-score {
+	width: 100%;
+	height: 100%;
+	background-color: #00ffff;
+	border-radius: 50%;
+	position: absolute;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.semicircle-score {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* Sposto l'origine di rotazione */
+	transform-origin: right center;
+}
+
+.semicircle-score:nth-child(1) {
+	background: #d20094;
+	position: absolute;
+	z-index: 2;
+	/* display: none; */
+}
+.semicircle-score:nth-child(2) {
+	background-color: #00ffff;
+	position: absolute;
+	z-index: 3;
+	rotate: 180deg;
+	/* display: none; */
+}
+.semicircle-score:nth-child(3) {
+	background: #00ffff;
+	position: absolute;
+	z-index: 4;
+
+	/* display: none; */
+}
+
+.outermost-circle-score {
+	width: 76%;
+	height: 76%;
+	background-image: url(../assets/Screenshot\ 2023-09-19\ 143940.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	border-radius: 50%;
+	top: 12%;
+	left: 12%;
+	z-index: 5;
+
+	/* display: none; */
+}
+
+/* Button */
+.rate-us {
+	text-align: center;
+	height: 60px;
+	margin-top: 3%;
+}
+
+.rate-us button {
+	width: 11%;
+	height: 100%;
+	background: transparent;
+	border: 2px solid white;
+	color: white;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+/* WRONG & CORRECT */
+.correct,
+.wrong {
+	position: absolute;
+}
+.correct {
+	top: 44%;
+	left: 23%;
+}
+.wrong {
+	top: 44%;
+	right: 23%;
+	color: #c1c3d1;
+}
+
+.correct h2,
+.wrong h2 {
+	font-size: 60px;
+	text-align: center;
+}
+.percent-c {
+	font-size: 60px;
+	text-align: left;
+}
+.percent-w {
+	font-size: 60px;
+	text-align: right;
+}
+.percent-q {
+	color: #c1c3d1;
+}
+
+.wrong .percent-q {
+	text-align: right;
+}
+.correct .percent-q {
+	text-align: left;
+}
+
+/* CENTRAL TEXT*/
+
+.congrats h3,
+h4 {
+	color: white;
+	position: absolute;
+	z-index: 6;
+}
+
+.congrats h3:nth-child(1) {
+	left: 25%;
+	top: 26%;
+	font-size: 1.4em;
+}
+
+.congrats h3:nth-child(2) {
+	left: 20%;
+	top: 33%;
+	font-size: 1.4em;
+	color: #00ffff;
+}
+
+.congrats h4 {
+	left: 19%;
+	top: 50%;
+	display: inline-block;
+	width: 230px;
+	text-align: center;
+	line-height: 1.2em;
+	font-family: "Inter", sans-serif;
+	font-weight: 300;
+	font-size: 0.9em;
+	color: #c1c3d1;
+}
+
+.fail {
+	color: #d20094;
+	position: absolute;
+	left: 36%;
+	top: 43%;
+	z-index: 6;
+	font-weight: bolder;
+	font-size: 3em;
+}
+
+/* CONFETTI */
+.confetti {
+	margin: 0 auto;
+	user-select: none;
+}
+canvas {
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+}
