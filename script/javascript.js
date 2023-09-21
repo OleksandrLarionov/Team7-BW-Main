@@ -112,9 +112,13 @@ const countDownTime = () => {
 		semicircles[2].style.display = "none";
 		timer.innerHTML = `<div class='colon'>0</div>`;
 		i++;
+		if(counter.innerText<10)
+		{
 		counter.innerText = i + 1;
+		}
 		resetTimer();
 		startquiz();
+		
 	}
 	if (secs > 19 && secs < 100) {
 		const timerPosition = (document.querySelector(".timer").style.left =
@@ -281,7 +285,10 @@ confirm.addEventListener("click", function () {
 		console.log(score);
 	}
 	i++;
-	counter.innerText = i + 1;
+	if(counter.innerText<10)
+		{
+		counter.innerText = i + 1;
+		}
 	svuotatutto();
 	startquiz();
 });
