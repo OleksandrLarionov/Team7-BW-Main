@@ -44,7 +44,7 @@
           <li>This exam will take approx. <span> 0-5 minutes </span>.</li>
         </ul>
       </div>
-      <form action="">
+
       <div>
         <label for="diff">Choose difficulty</label>
         <select name="difficulty" id="diff">
@@ -53,11 +53,20 @@
           <option value="normal">normal</option>
           <option value="hard">hard</option>
         </select>
-        <input type="number" id="num" placeholder="number of questions" required>
+        <input
+          type="number"
+          id="num"
+          placeholder="number of questions"
+          required
+        />
       </div>
+
       <div class="container">
-        <label onclick="check ()" for="myCheckbox" id="myLabel"
-          ><span id="mySpan"></span
+        <label
+          id="mySpan"
+          onclick="check ()"
+          for="myCheckbox"
+          id="myLabel"
         ></label>
         <input type="checkbox" id="myCheckbox" name="myCheckbox" />
         <p>I promise to answer myself without help from anyone</p>
@@ -65,7 +74,6 @@
           PROCEED
         </button>
       </div>
-    </form>
     </main>
     <script src="script/welcome.js"></script>
   </body>

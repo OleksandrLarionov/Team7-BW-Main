@@ -9,13 +9,13 @@ const check = function () {
 
 
 
-const goToBenchmark = function(e)
- { const checked = document.getElementById ('mySpan')
- const number=document.getElementById("num")
- console.log(number)
-    e.preventDefault();
- if (checked.innerText !=='' && number.value>5) 
- {
-    console.log("ciao")
-    window.location.href="index.html"}
-	 }
+const goToBenchmark = function(){
+    const checked = document.getElementById('mySpan')
+    console.log(checked)
+
+    if (checked.innerText !=='' && number.value>4 && number.value<10) {
+        console.log("ciao")
+        window.location.href="index.html"}
+}
+
+goToBenchmark()
