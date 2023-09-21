@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/welcome.css" />
+
+    <link rel="stylesheet" href="
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>EPICCODE - Benchmark</title>
+  </head>
+  <body>
+    <header>
+      <img src="assets/epicode_logo.png" alt="logo epicode" id="logo-epicode" />
+    </header>
+    <main>
+      <h2>Welcome to</h2>
+      <h1>your exam</h1>
+
+      <div>
+        <h3>Instructions</h3>
+
+        <p>
+          We don't expect most engineers to know the answers to all of these
+        </p>
+        <p>questions, so don't worry if you're unsure of a few of them</p>
+
+        <ul>
+          <li>
+            Each question is <span>timed</span> and can only be
+            <span>answerd once</span>
+          </li>
+          <li>
+            Changing browser tab or opening other windows will
+            <span>invalidate the question</span>.
+          </li>
+          <li>This exam will take approx. <span> 0-5 minutes </span>.</li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <label onclick="check ()" for="myCheckbox" id="myLabel"
+          ><span id="mySpan"></span
+        ></label>
+        <input type="checkbox" id="myCheckbox" name="myCheckbox" />
+        <p>I promise to answer myself without help from anyone</p>
+        <button type="button" class="Procees" onclick="goToBenchmark()">
+          PROCEED
+        </button>
+      </div>
+    </main>
+    <script src="script/welcome.js"></script>
+  </body>
+</html>
