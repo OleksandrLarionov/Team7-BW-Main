@@ -44,6 +44,7 @@ const countDownTime = () => {
   <div class='colon'>${secs}</div>`;
 
 	if (remaningTime < 0) {
+		console.log("primo if");
 		clearInterval(timeLoop);
 		semicircles[0].style.display = "none";
 		semicircles[1].style.display = "none";
