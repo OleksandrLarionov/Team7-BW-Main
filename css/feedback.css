@@ -79,7 +79,6 @@ button{
 .stella{
     filter: brightness(0.2);
     cursor: pointer;
-    
 }
 
 .active {
