@@ -170,3 +170,7 @@ render();
 window.addEventListener("resize", function () {
 	resizeCanvas();
 });
+
+const goToFeedback = function(){
+	window.location.href="feedback.html"
+}
