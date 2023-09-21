@@ -230,8 +230,9 @@ footer {
 	border: 1.5px solid white;
 	color: white;
 	padding: 0.5em;
-	padding-left: 1.8em;
-	padding-right: 1.8em;
+	position: absolute;
+	bottom: 9%;
+	right: 10%;
 	font-size: large;
 	font-weight: bold;
 	text-align: end;
@@ -251,4 +252,7 @@ footer {
 footer p {
 	font-family: "outfit";
 	font-size: larger;
+	position: absolute;
+	bottom: 22%;
+	left: 46%;
 }
