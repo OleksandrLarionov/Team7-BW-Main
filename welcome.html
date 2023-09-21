@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="css/welcome.css" />
-
-    <link rel="stylesheet" href="
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -14,7 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>EPICCODE - Benchmark</title>
+    <title>EPICODE - Benchmark</title>
   </head>
   <body>
     <header>
@@ -44,7 +42,6 @@
           <li>This exam will take approx. <span> 0-5 minutes </span>.</li>
         </ul>
       </div>
-      <form action="">
       <div>
         <label for="diff">Choose difficulty</label>
         <select name="difficulty" id="diff">
@@ -53,7 +50,9 @@
           <option value="normal">normal</option>
           <option value="hard">hard</option>
         </select>
-        <input type="number" id="num" placeholder="number of questions" required>
+        <br />
+        <label for="num">Select a number of questions between 5 and 10</label>
+        <input type="number" id="num" placeholder="number of questions" />
       </div>
       <div class="container">
         <label onclick="check ()" for="myCheckbox" id="myLabel"
@@ -65,7 +64,6 @@
           PROCEED
         </button>
       </div>
-    </form>
     </main>
     <script src="script/welcome.js"></script>
   </body>

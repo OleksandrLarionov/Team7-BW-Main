@@ -1,3 +1,6 @@
+let numberOfQuestions = localStorage.getItem('number')
+let testDifficulty = localStorage.getItem('difficulty')
+
 const questions = [
 	{	
 		category: "Science: Computers",
@@ -351,4 +354,3 @@ console.log(i);
 
 // console.log(questions);
 //const confirm=document.createElement("div");
-
