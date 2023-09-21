@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Lexend:wght@300;500&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;500;600;700&family=Outfit:wght@400;700&family=Poppins:wght@300;400;500&family=Prata&family=Roboto+Condensed&family=Rubik:wght@400;500&family=Ubuntu:wght@400;500;700&family=Zilla+Slab:wght@400;600&display=swap');
+
+body{
+    box-sizing: border-box;
+    background-image: url(../assets/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    font-family: 'Outfit', sans-serif;
+}
+
+#logo-epicode{
+    width: 15em;
+    margin: 3em 0 10em 5em;
+}
+
+h1{
+    color: white;
+    font-size: 6em;
+    padding-bottom: 0.2em;
+    font-weight: 700;
+}
+
+main, footer{
+    text-align: center;
+}
+
+h1 + div {
+    color: white;
+    font-size: 3em;
+    margin: 0.8em 5em;
+    line-height: 1.3em;
+}
+
+label{
+    color: white;
+    font-size: 3em; 
+    display: block;
+}
+
+input{
+    margin: 4em 0 2em;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #900080;
+    width: 55em;
+    font-size: 1.5em;
+    padding-bottom: 0.8em;
+    color: white;
+}
+
+.stella{
+    margin-right: 1em;
+    width: 4em;
+}
+
+#stars{
+    margin: 3em 0 8em;
+}
+
+::placeholder{
+    padding-left: 1em;     
+}
+
+button{
+    width: 10em;
+    height: 3em;
+    font-size: 1.7em;
+    color: #0b113b;
+    background-color: #00ffff;
+    box-shadow: 0 0 18px 0.5px #00ffff;
+    border: none;
+    font-weight: 700;
+    margin-top: 2em;
+    margin-bottom: 5em;
+}
+
+.stella{
+    filter: brightness(0.2);
+    cursor: pointer;
+    
+}
+
+.active {
+    filter: brightness(1);
+}
+
+button{
+    cursor: pointer;
+}
+
+

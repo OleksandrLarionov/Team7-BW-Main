@@ -1,0 +1,258 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;400;600;700&display=swap");
+
+/* Css Timer settings */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* PROGRESS INDICATOR */
+#timer-main-container {
+	display: inline-block;
+	text-align: center;
+	position: absolute;
+	/* font-family: "Inter", sans-serif; */
+	font-family: "Outfit", sans-serif;
+	left: 80%;
+	top: 5%;
+}
+
+.circle-container {
+	width: 150px;
+	height: 150px;
+	background-color: #00ffff;
+	border-radius: 50%;
+	position: absolute;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.semicircle {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* Sposto l'origine di rotazione */
+	transform-origin: right center;
+}
+
+.semicircle:nth-child(1) {
+	background: rgb(196, 164, 200);
+	position: absolute;
+	z-index: 2;
+}
+.semicircle:nth-child(2) {
+	background-color: #00ffff;
+	position: absolute;
+	z-index: 3;
+	rotate: 180deg;
+	/* display: none; */
+}
+.semicircle:nth-child(3) {
+	background: #00ffff;
+	position: absolute;
+	z-index: 4;
+
+	/* display: none; */
+}
+
+.outermost-circle {
+	width: 118px;
+	height: 118px;
+	background-image: url(../assets/Screenshot\ 2023-09-18\ 215544.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	border-radius: 50%;
+	top: 16px;
+	left: 16px;
+	z-index: 5;
+
+	/* display: none; */
+}
+
+/* TIMER */
+.timer-container {
+	width: 140px;
+	height: 170px;
+	border-radius: 50%;
+	z-index: 6;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	font-weight: 300;
+	font-family: "Outfit";
+	color: white;
+}
+
+.timer-container p {
+	position: absolute;
+	font-size: 0.6em;
+}
+.timer-container > p {
+	position: absolute;
+	left: 38px;
+	top: 20px;
+}
+.timer-container p:last-child {
+	position: absolute;
+	left: 38px;
+	top: 85px;
+}
+
+.timer {
+	display: inline;
+	font-size: 2.5em;
+	position: absolute;
+	left: 44px;
+	top: 25px;
+}
+.timer div {
+	position: absolute;
+	display: inline-block;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.timer .colon {
+	position: absolute;
+	left: -4px;
+}
+
+* {
+	font-family: "Inter", sans-serif;
+	font-family: "Outfit", sans-serif;
+}
+
+body {
+	background-image: url(../assets/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+#logo-epicode {
+	width: 15em;
+	margin: 2em 0 0em 5em;
+}
+
+header {
+	display: inline-block;
+}
+
+#question {
+	font-size: 40px;
+	font-weight: bold;
+	font-family: "Outfit", sans-serif;
+	color: white;
+	text-align: center;
+	margin: 13% 80px 0 80px;
+}
+
+#answers {
+	font-size: medium;
+	font-weight: 600;
+	font-family: "Outfit", sans-serif;
+	color: white;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 770px;
+	margin: 30px auto 0 auto;
+}
+#confirma {
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin: 20px;
+
+	font-family: "outfit";
+}
+footer {
+	color: white;
+	text-align: center;
+}
+
+/* #answers div{
+    hu
+ } */
+
+.answer-box {
+	margin: 20px;
+	border-top: 3px solid #ccc;
+	border-left: 3px solid #ccc;
+	border-right: 0;
+	border-bottom: 1px solid rgb(61, 65, 96);
+	cursor: pointer;
+	text-align: center;
+	/* background-color: rgba(#f7f7f7, 0.9); //?? */
+	border-radius: 30px;
+	transition: background-color 0.3s ease;
+	color: #fff;
+	display: inline-block;
+	width: 345px;
+	padding: 1.6em 0;
+}
+
+/* #answer1 {
+    
+    background-color: transparent;
+    color: #fff;
+}
+
+#answer2 {
+   
+    background-color: transparent;
+    color: #fff;
+}
+
+#answer3 {
+    
+    background-color: transparent;
+    color: #fff;
+}
+
+#answer4 {
+   
+    background-color: transparent;
+    color: #fff;
+} */
+
+.submit {
+	background-color: transparent;
+	border: 1.5px solid white;
+	color: white;
+	padding: 0.5em;
+	position: absolute;
+	bottom: 9%;
+	right: 10%;
+	font-size: large;
+	font-weight: bold;
+	text-align: end;
+}
+.cellSelected {
+	background-color: #d20094;
+	background-size: auto;
+}
+footer {
+	margin-top: 2em;
+	text-align: center;
+}
+#pink {
+	color: #d20094;
+	width: 100%;
+}
+footer p {
+	font-family: "outfit";
+	font-size: larger;
+	position: absolute;
+	bottom: 22%;
+	left: 46%;
+}
