@@ -173,4 +173,6 @@ window.addEventListener("resize", function () {
 
 const goToFeedback = function(){
 	window.location.href="feedback.html"
-}
+	localStorage.clear();
+	}
+
