@@ -9,3 +9,8 @@ const check = function () {
 
 
 
+const goToBenchmark = function()
+ { const checked = document.getElementById ('mySpan')
+ if (checked.innerText !=='') 
+ {window.location.href="index.html"}
+	 }
