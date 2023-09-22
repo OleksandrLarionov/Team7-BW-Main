@@ -4,7 +4,7 @@ const correct = document.querySelectorAll(".percent-c");
 const wrong = document.querySelectorAll(".percent-w");
 const question = document.querySelectorAll(".percent-q");
 
-const totalScore = 10;
+const totalScore = localStorage.getItem('number')
 const wrongScore = totalScore - score;
 const wrongPercent = (((totalScore - score) * 100) / totalScore).toFixed(1);
 const scorePercent = ((score * 100) / totalScore).toFixed(1);
@@ -53,6 +53,20 @@ const scoreDisplay = () => {
 };
 
 scoreDisplay();
+
+//GO TO FEEDBACK
+const goToFeedback = function(){
+	window.location.href="feedback.html"
+	localStorage.clear();
+	}
+
+
+const buttonDiv = document.querySelector('.rate-us')
+const rateButton = document.createElement('button')
+rateButton.innerText='RATE US'
+buttonDiv.appendChild(rateButton)
+rateButton.addEventListener('click', goToFeedback)
+
 
 //FUNZIONE CONFETTI
 canvas = document.getElementById("canvas");
@@ -171,8 +185,4 @@ window.addEventListener("resize", function () {
 	resizeCanvas();
 });
 
-const goToFeedback = function(){
-	window.location.href="feedback.html"
-	localStorage.clear();
-	}
 

@@ -564,15 +564,18 @@ confirm.addEventListener("click", function () {
 	let risp = document.getElementsByClassName("cellSelected");
 	let risp2 = Array.from(risp);
 	console.log(risp2[0].innerText);
+	console.log(numberOfQuestions)
+	console.log(counter.innerText)
 	if (risp2[0].innerText === questions[i].correct_answer) 
 	{
 		score += 1;
 		console.log(score);
 	}
 	i++;
-	if(counter.innerText<numberOfQuestions)
+	if(counter.innerText<questions.length)
 		{
 		counter.innerText = i + 1;
+		console.log(counter)
 		}
 	svuotatutto();
 	startquiz();
