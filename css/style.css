@@ -252,7 +252,7 @@ footer {
 footer p {
 	font-family: "outfit";
 	font-size: larger;
-	position: absolute;
-	bottom: 22%;
+	position: sticky;
+	
 	left: 46%;
 }
