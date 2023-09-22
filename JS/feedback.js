@@ -15,7 +15,8 @@ const submitForm = function(){
     getForm.addEventListener('submit', function(e){
         e.preventDefault()
         const commentField = document.getElementById('comment')
-        const f = confirm('Thank you for your comment')
+        const f = confirm(`Thank you for your comment!
+        Want to visit our website? :)`)
         commentField.value = '' 
 
         if(f){
