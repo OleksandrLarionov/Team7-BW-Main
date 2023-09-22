@@ -103,7 +103,7 @@ const easy = [
 const normal = [{
 	category: "Science: Computers",
 	type: "multiple",
-	difficulty: "normal",
+	difficulty: "easy",
 	question: "When Gmail first launched, how much storage did it provide for your email?",
 	correct_answer: "1GB",
 	incorrect_answers: [
@@ -223,7 +223,7 @@ const hard = [
 	{
 		category: "Science: Computers",
 		type: "multiple",
-		difficulty: "hard",
+		difficulty: "easy",
 		question: "According to the International System of Units, how many bytes are in a kilobyte of RAM?",
 		correct_answer: "1000",
 		incorrect_answers: [
