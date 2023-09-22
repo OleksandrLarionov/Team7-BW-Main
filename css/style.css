@@ -237,6 +237,7 @@ footer {
 	font-size: large;
 	font-weight: bold;
 	text-align: end;
+	cursor: pointer;
 }
 .cellSelected {
 	background-color: #d20094;

@@ -131,6 +131,7 @@ main h3 {
 	color: white;
 	font-weight: bold;
 	font-size: 1.2em;
+	cursor: pointer;
 }
 
 /* WRONG & CORRECT */
