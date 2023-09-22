@@ -1,4 +1,7 @@
-const questions = [
+let numberOfQuestions = localStorage.getItem('number')
+let testDifficulty = localStorage.getItem('difficulty')
+
+const easy = [
 	{	
 		category: "Science: Computers",
 		type: "multiple",
@@ -14,7 +17,7 @@ const questions = [
 	{
 		category: "Science: Computers",
 		type: "multiple",
-		difficulty: "hard",
+		difficulty: "easy",
 		question:
 			"In the programming language Java, which of these keywords would you put on a variable to make sure it doesn't get modified?",
 		correct_answer: "Final",
@@ -40,7 +43,7 @@ const questions = [
 	{
 		category: "Science: Computers",
 		type: "multiple",
-		difficulty: "easy",
+		difficulty: "hard",
 		question:
 			"What is the most preferred image format used for logos in the Wikimedia database?",
 		correct_answer: ".svg",
@@ -97,6 +100,255 @@ const questions = [
 	
 ];
 
+const normal = [{
+	category: "Science: Computers",
+	type: "multiple",
+	difficulty: "easy",
+	question: "When Gmail first launched, how much storage did it provide for your email?",
+	correct_answer: "1GB",
+	incorrect_answers: [
+		"512MB",
+		"5GB",
+		"Unlimited"
+	]
+},
+{
+	category: "Science: Computers",
+	type: "multiple",
+	difficulty: "normal",
+	question: "HTML is what type of language?",
+	correct_answer: "Markup Language",
+	incorrect_answers: [
+		"Macro Language",
+		"Programming Language",
+		"Scripting Language"
+	]
+},
+{
+	category: "Science: Computers",
+	type: "multiple",
+	difficulty: "normal",
+	question: "If you were to code software in this language you'd only be able to type 0's and 1's.",
+	correct_answer: "Binary",
+	incorrect_answers: [
+		"JavaScript",
+		"C++",
+		"Python"
+	]
+},
+{
+	category: "Science: Computers",
+	type: "multiple",
+	difficulty: "normal",
+	question: "The series of the Intel HD graphics generation succeeding that of the 5000 and 6000 series (Broadwell) is called:",
+	correct_answer: "HD Graphics 500",
+	incorrect_answers: [
+		"HD Graphics 700 ",
+		"HD Graphics 600",
+		"HD Graphics 7000"
+	]
+},
+{
+	category: "Science: Computers",
+	type: "boolean",
+	difficulty: "normal",
+	question: "Ada Lovelace is often considered the first computer programmer.",
+	correct_answer: "True",
+	incorrect_answers: [
+		"False"
+	]
+},
+{
+	category: "Science: Computers",
+	type: "multiple",
+	difficulty: "easy",
+	question: "Which computer language would you associate Django framework with?",
+	correct_answer: "Python",
+	incorrect_answers: [
+		"C#",
+		"C++",
+		"Java"
+	]
+},
+{
+	category: "Science: Computers",
+	type: "boolean",
+	difficulty: "hard",
+	question: "Time on Computers is measured via the EPOX System.",
+	correct_answer: "False",
+	incorrect_answers: [
+		"True"
+	]
+},
+{
+	category: "Science: Computers",
+	type: "multiple",
+	difficulty: "hard",
+	question: "Which programming language shares its name with an island in Indonesia?",
+	correct_answer: "Java",
+	incorrect_answers: [
+		"Python",
+		"C",
+		"Jakarta"
+	]
+},
+{
+	category: "Science: Computers",
+	type: "multiple",
+	difficulty: "easy",
+	question: "In computing, what does MIDI stand for?",
+	correct_answer: "Musical Instrument Digital Interface",
+	incorrect_answers: [
+		"Musical Interface of Digital Instruments",
+		"Modular Interface of Digital Instruments",
+		"Musical Instrument Data Interface"
+	]
+},
+{
+	category: "Science: Computers",
+	type: "multiple",
+	difficulty: "hard",
+	question: "What language does Node.js use?",
+	correct_answer: "JavaScript",
+	incorrect_answers: [
+		"Java",
+		"Java Source",
+		"Joomla Source Code"
+	]
+}
+]
+
+
+const hard = [
+	{
+		category: "Science: Computers",
+		type: "multiple",
+		difficulty: "easy",
+		question: "According to the International System of Units, how many bytes are in a kilobyte of RAM?",
+		correct_answer: "1000",
+		incorrect_answers: [
+			"512",
+			"1024",
+			"500"
+		]
+	},
+	{
+		category: "Science: Computers",
+		type: "multiple",
+		difficulty: "hard",
+		question: "HTML is what type of language?",
+		correct_answer: "Markup Language",
+		incorrect_answers: [
+			"Macro Language",
+			"Programming Language",
+			"Scripting Language"
+		]
+	},
+	{
+		category: "Science: Computers",
+		type: "multiple",
+		difficulty: "hard",
+		question: "What is the domain name for the country Tuvalu?",
+		correct_answer: ".tv",
+		incorrect_answers: [
+			".tu",
+			".tt",
+			".tl"
+		]
+	},
+	{
+		category: "Science: Computers",
+		type: "multiple",
+		difficulty: "normal",
+		question: "On Twitter, what was the original character limit for a Tweet?",
+		correct_answer: "140",
+		incorrect_answers: [
+			"120",
+			"160",
+			"100"
+		]
+	},
+	{
+		category: "Science: Computers",
+		type: "boolean",
+		difficulty: "hard",
+		question: `"HTML" stands for Hypertext Markup Language.`,
+		correct_answer: "True",
+		incorrect_answers: [
+			"False"
+		]
+	},
+	{
+		category: "Science: Computers",
+		type: "boolean",
+		difficulty: "hard",
+		question: "The NVidia GTX 1080 gets its name because it can only render at a 1920x1080 screen resolution.",
+		correct_answer: "False",
+		incorrect_answers: [
+			"True"
+		]
+	},
+	{
+		category: "Science: Computers",
+		type: "multiple",
+		difficulty: "hard",
+		question: "The numbering system with a radix of 16 is more commonly referred to as ",
+		correct_answer: "Hexidecimal",
+		incorrect_answers: [
+			"Binary",
+			"Duodecimal",
+			"Octal"
+		]
+	},
+	{
+		category: "Science: Computers",
+		type: "multiple",
+		difficulty: "hard",
+		question: "How many values can a single byte represent?",
+		correct_answer: "256",
+		incorrect_answers: [
+			"8",
+			"1",
+			"1024"
+		]
+	},
+	{
+		category: "Science: Computers",
+		type: "multiple",
+		difficulty: "easy",
+		question: "In computing, what does MIDI stand for?",
+		correct_answer: "Musical Instrument Digital Interface",
+		incorrect_answers: [
+			"Musical Interface of Digital Instruments",
+			"Modular Interface of Digital Instruments",
+			"Musical Instrument Data Interface"
+		]
+	},
+	{
+		category: "Science: Computers",
+		type: "boolean",
+		difficulty: "hard",
+		question: "The Python programming language gets its name from the British comedy group &quot;Monty Python.&quot;",
+		correct_answer: "True",
+		incorrect_answers: [
+			"False"
+		]
+	}
+]
+
+let box
+if (testDifficulty==='easy') {
+	box = Array.from(easy)
+} else if (testDifficulty==='normal'){
+	box = Array.from(normal)
+} else if (testDifficulty==='hard'){
+	box = Array.from(hard)
+}
+
+const questions = box.splice(0,numberOfQuestions)
+
+const denominator = document.getElementById('pink')
+denominator.innerText = `/${numberOfQuestions}`
 
 const semicircles = document.querySelectorAll(".semicircle");
 const timer = document.querySelector(".timer");
@@ -312,15 +564,18 @@ confirm.addEventListener("click", function () {
 	let risp = document.getElementsByClassName("cellSelected");
 	let risp2 = Array.from(risp);
 	console.log(risp2[0].innerText);
+	console.log(numberOfQuestions)
+	console.log(counter.innerText)
 	if (risp2[0].innerText === questions[i].correct_answer) 
 	{
 		score += 1;
 		console.log(score);
 	}
 	i++;
-	if(counter.innerText<10)
+	if(counter.innerText<questions.length)
 		{
 		counter.innerText = i + 1;
+		console.log(counter)
 		}
 	svuotatutto();
 	startquiz();
@@ -351,4 +606,3 @@ console.log(i);
 
 // console.log(questions);
 //const confirm=document.createElement("div");
-

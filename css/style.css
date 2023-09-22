@@ -139,7 +139,8 @@ body {
 
 #logo-epicode {
 	width: 15em;
-	margin: 2em 0 0em 5em;
+    margin: 4em 0 7em 5em;
+    margin-bottom: auto;
 }
 
 header {
@@ -236,6 +237,7 @@ footer {
 	font-size: large;
 	font-weight: bold;
 	text-align: end;
+	cursor: pointer;
 }
 .cellSelected {
 	background-color: #d20094;
@@ -252,7 +254,7 @@ footer {
 footer p {
 	font-family: "outfit";
 	font-size: larger;
-	position: absolute;
-	bottom: 22%;
+	position: fixed;
+	bottom: 4.5%;
 	left: 46%;
 }

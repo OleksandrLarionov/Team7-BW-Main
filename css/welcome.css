@@ -19,7 +19,7 @@ h1 {color: white;
     padding-top: 0;
     
 
-line-height: 0.8;
+line-height: 0.5em;
 }
 
 
@@ -36,7 +36,22 @@ h2
 }
 
 
-h3 {color: rgb(187, 23, 143);}
+h3 {color: rgb(187, 23, 143);
+    margin-top: 2em ;
+    margin-bottom: 1.5em;
+    font-size: larger;
+    font-weight: bolder;
+
+
+}
+h3 + p{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+h3 + p + p{
+    margin-top: 0;
+    padding-top: 0;
+}
 #logo-epicode
 {
     width: 15em;
@@ -52,13 +67,17 @@ body {
     height: 100%;
 }
 main {
-    margin: 3em 0 7em 5em;
+    margin: 2em 0 0 5em;
+    font-size: x-large;
 }
 ul li {
     color: white;
-  }
+    padding: 0.3em;
+    margin-left: 3em;
+
+     }
   ul li span {
-    font-size: medium;
+    font-size: 1em;
     font-weight: bold;
   }
    div {
@@ -88,6 +107,7 @@ ul li {
     border-color: aqua;
     box-shadow: 0px 0px 50px rgb(34, 214, 230);
     cursor: pointer;
+    font-size: large;
 
      }
 
@@ -104,6 +124,7 @@ ul li {
  p {
     margin-left: 15px;
     line-height: 1.2em;
+    padding: 0.5em;
 
  }
   #myCheckbox {
@@ -115,8 +136,33 @@ ul li {
   }
     
 
+  label {
+    margin: 1em;
+    padding: 0;
+    display: inline-block;
+    color: white;
+  }
 
+  #num {
+    background-color: transparent;
+    border-radius: 10px;
+    color: white;
+    font-size: 0.9em;
+  }
 
+  #diff 
+  {
+    background-color: rgb(9, 16, 57);
+    border-radius: 10px;
+    color: white;
+    font-size: 0.9em;
+    
+  }
+
+  label:nth-of-type(2){
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
 
    

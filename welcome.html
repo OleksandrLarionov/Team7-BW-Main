@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
 
     <link rel="stylesheet" href="css/welcome.css" />
     <link
@@ -12,7 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>EPICCODE - Benchmark</title>
+    <title>EPICODE - Benchmark</title>
   </head>
   <body>
     <header>
@@ -42,14 +43,26 @@
           <li>This exam will take approx. <span> 0-5 minutes </span>.</li>
         </ul>
       </div>
+      <div>
+        <label for="diff">Choose difficulty*</label>
 
+        <select name="difficulty" id="diff">
+          <option value="not_selected">-----</option>
+          <option value="easy">Easy</option>
+          <option value="normal">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <br />
+        <label for="num">Select a number of questions between 5 and 10*</label>
+        <input type="number" id="num" placeholder="number of questions" />
+      </div>
       <div class="container">
         <label onclick="check ()" for="myCheckbox" id="myLabel"
           ><span id="mySpan"></span
         ></label>
         <input type="checkbox" id="myCheckbox" name="myCheckbox" />
-        <p>I promise to answer myself without help from anyone</p>
-        <button type="button" class="Procees" onclick="goToBenchmark()">
+        <p>I promise to answer myself without help from anyone*</p>
+        <button type="submit" class="Procees" onclick="goToBenchmark()">
           PROCEED
         </button>
       </div>
