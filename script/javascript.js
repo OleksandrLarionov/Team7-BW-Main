@@ -328,7 +328,7 @@ const hard = [
 		category: "Science: Computers",
 		type: "boolean",
 		difficulty: "hard",
-		question: "The Python programming language gets its name from the British comedy group &quot;Monty Python.&quot;",
+		question: `The Python programming language gets its name from the British comedy group "Monty Python".`,
 		correct_answer: "True",
 		incorrect_answers: [
 			"False"
