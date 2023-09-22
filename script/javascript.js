@@ -570,7 +570,7 @@ confirm.addEventListener("click", function () {
 		console.log(score);
 	}
 	i++;
-	if(counter.innerText<10)
+	if(counter.innerText<numberOfQuestions)
 		{
 		counter.innerText = i + 1;
 		}

@@ -12,14 +12,16 @@ body{
 
 #logo-epicode{
     width: 15em;
-    margin: 3em 0 10em 5em;
+    margin: 4em 0 7em 5em;
+    margin-bottom: auto;
 }
 
 h1{
     color: white;
-    font-size: 6em;
+    font-size: 3em;
     padding-bottom: 0.2em;
     font-weight: 700;
+    margin-bottom: 0.6em;
 }
 
 main, footer{
@@ -28,14 +30,14 @@ main, footer{
 
 h1 + div {
     color: white;
-    font-size: 3em;
+    font-size: 1.5em;
     margin: 0.8em 5em;
     line-height: 1.3em;
 }
 
 label{
     color: white;
-    font-size: 3em; 
+    font-size: 1.5em; 
     display: block;
 }
 
@@ -44,19 +46,19 @@ input{
     background: transparent;
     border: 0;
     border-bottom: 2px solid #900080;
-    width: 55em;
-    font-size: 1.5em;
+    width: 45em;
+    font-size: 1.2em;
     padding-bottom: 0.8em;
     color: white;
 }
 
 .stella{
     margin-right: 1em;
-    width: 4em;
+    width: 3em;
 }
 
 #stars{
-    margin: 3em 0 8em;
+    margin: 3em 0 6em;
 }
 
 ::placeholder{
@@ -66,14 +68,14 @@ input{
 button{
     width: 10em;
     height: 3em;
-    font-size: 1.7em;
+    font-size: 1.5em;
     color: #0b113b;
     background-color: #00ffff;
     box-shadow: 0 0 18px 0.5px #00ffff;
     border: none;
     font-weight: 700;
     margin-top: 2em;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
 }
 
 .stella{

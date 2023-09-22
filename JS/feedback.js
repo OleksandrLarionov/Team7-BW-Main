@@ -15,8 +15,12 @@ const submitForm = function(){
     getForm.addEventListener('submit', function(e){
         e.preventDefault()
         const commentField = document.getElementById('comment')
-        alert('Thank you for your comment')
+        const f = confirm('Thank you for your comment')
         commentField.value = '' 
+
+        if(f){
+            window.location.href="https://www.epicode.com"
+        }
         
         
         stars.forEach((star) => {
