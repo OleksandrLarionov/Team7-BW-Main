@@ -36,7 +36,14 @@ h2
 }
 
 
-h3 {color: rgb(187, 23, 143);}
+h3 {color: rgb(187, 23, 143);
+    margin-top: 2em ;
+    margin-bottom: 1.5em;
+    font-size: larger;
+    font-weight: bolder;
+
+
+}
 #logo-epicode
 {
     width: 15em;
@@ -56,7 +63,10 @@ main {
 }
 ul li {
     color: white;
-  }
+    padding: 0.3em;
+    margin-left: 3em;
+
+     }
   ul li span {
     font-size: medium;
     font-weight: bold;
@@ -104,6 +114,7 @@ ul li {
  p {
     margin-left: 15px;
     line-height: 1.2em;
+    padding: 0.5em;
 
  }
   #myCheckbox {
@@ -115,7 +126,28 @@ ul li {
   }
     
 
+  label {
+    margin: 1em;
+    padding: 0;
+    display: inline-block;
+    color: white;
+  }
 
+  #num {
+    background-color: transparent;
+    border-radius: 10px;
+    color: white;
+    font-size: medium;
+  }
+
+  #diff 
+  {
+    background-color: transparent;
+    border-radius: 10px;
+    color: white;
+    font-size: medium;
+    
+  }
 
 
 
